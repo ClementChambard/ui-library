@@ -13,6 +13,20 @@ impl Size {
             h_max: self.h,
         }
     }
+
+    pub fn mul(&self, factor: f32) -> Self {
+        Self {
+            w: self.w * factor,
+            h: self.h * factor,
+        }
+    }
+
+    pub fn mul_d(&self, factor_w: f32, factor_h: f32) -> Self {
+        Self {
+            w: self.w * factor_w,
+            h: self.h * factor_h,
+        }
+    }
 }
 
 #[derive(Default, Clone, Copy, PartialEq, Debug)]
